@@ -36,4 +36,7 @@ public class EnvironmentConfig {
         return env.getProperty("mobio.url.transaction") ;
     }
 
+    public String getMobioToken(){
+        return env.getProperty("mobio.token") ;
+    }
 }
