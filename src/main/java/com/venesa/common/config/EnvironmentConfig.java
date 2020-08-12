@@ -12,31 +12,35 @@ import org.springframework.http.HttpMethod;
 public class EnvironmentConfig {
     private final Environment env;
 
-    public String getSourceBooking(HttpMethod method){
-        return method.matches("POST") ? env.getProperty("mobio.url.booking.add") : env.getProperty("mobio.url.booking.update") ;
+    public String getSourceBooking(HttpMethod method) {
+        return method.matches("POST") ? env.getProperty("mobio.url.booking.add") : env.getProperty("mobio.url.booking.update");
     }
 
-    public String getSourceContract(HttpMethod method){
-        return method.matches("POST") ? env.getProperty("mobio.url.contract.add") : env.getProperty("mobio.url.contract.update") ;
+    public String getSourceContract(HttpMethod method) {
+        return method.matches("POST") ? env.getProperty("mobio.url.contract.add") : env.getProperty("mobio.url.contract.update");
     }
 
-    public String getSourceIntroduceFriends(){
-        return env.getProperty("mobio.url.introduceFriend") ;
+    public String getSourceIntroduceFriends() {
+        return env.getProperty("mobio.url.introduceFriend");
     }
 
-    public String getSourceImportCustomers(){
-        return env.getProperty("mobio.url.importCustomers") ;
+    public String getSourceImportCustomers() {
+        return env.getProperty("mobio.url.importCustomers");
     }
 
-    public String getSourceDoneService(){
-        return env.getProperty("mobio.url.doneService") ;
+    public String getSourceDoneService() {
+        return env.getProperty("mobio.url.doneService");
     }
 
-    public String getSourceTransaction(){
-        return env.getProperty("mobio.url.transaction") ;
+    public String getSourceTransaction() {
+        return env.getProperty("mobio.url.transaction");
     }
 
-    public String getMobioToken(){
-        return env.getProperty("mobio.token") ;
+    public String getMobioToken() {
+        return env.getProperty("mobio.token");
+    }
+
+    public String getXMerchantId() {
+        return env.getProperty("mobio.xmerchantId");
     }
 }

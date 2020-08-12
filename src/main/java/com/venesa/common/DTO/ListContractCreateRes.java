@@ -5,13 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class MobioResponse<T> implements Serializable {
-    private String code;
-    private String message;
-    private T data;
+public class ListContractCreateRes implements Serializable {
+    private List<ContractCreateRes> contract;
 }
