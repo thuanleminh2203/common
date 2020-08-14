@@ -1,6 +1,5 @@
-package com.venesa.common.DTO.mobio;
+package com.venesa.common.DTO.mobio.request;
 
-import com.venesa.common.DTO.mobio.BookingRes;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,12 +10,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ListBookingRes implements Serializable {
-    private List<BookingRes> booking;
-
-
-
-
-
-
+public class ListContractRq implements Serializable {
+    private List<ContractDTO> contract;
 }
