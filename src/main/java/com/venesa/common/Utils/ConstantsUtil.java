@@ -3,6 +3,7 @@ package com.venesa.common.Utils;
 import org.springframework.http.HttpMethod;
 
 public class ConstantsUtil {
+    public static final String URL_GATEWAY = "/crm-mobio/loyalty/api/v1/";
     public static final String OK = "OK";
     public static final String UNAUTHORIZED = "UNAUTHORIZED";
     public static final String FORBIDDEN = "FORBIDDEN";
