@@ -1,5 +1,6 @@
 package com.venesa.common.config;
 
+import com.venesa.common.Utils.EnvironmentConstant;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -12,35 +13,43 @@ import org.springframework.http.HttpMethod;
 public class EnvironmentConfig {
     private final Environment env;
 
-    public String getSourceBooking(HttpMethod method) {
-        return method.matches("POST") ? env.getProperty("mobio.url.booking.add") : env.getProperty("mobio.url.booking.update");
+    public String getDomainMobio(){
+        return  env.getProperty(EnvironmentConstant.MOBIO_URL);
     }
 
-    public String getSourceContract(HttpMethod method) {
-        return method.matches("POST") ? env.getProperty("mobio.url.contract.add") : env.getProperty("mobio.url.contract.update");
+    public String getSourceBooking() {
+        return  getDomainMobio() + env.getProperty(EnvironmentConstant.MOBIO_BOOKING);
+    }
+
+    public String getSourceContract() {
+        return  getDomainMobio() + env.getProperty(EnvironmentConstant.MOBIO_CONTRACT);
     }
 
     public String getSourceIntroduceFriends() {
-        return env.getProperty("mobio.url.introduceFriend");
+        return getDomainMobio()+ env.getProperty(EnvironmentConstant.MOBIO_INTRODUCE_FRIENDS);
     }
 
     public String getSourceImportCustomers() {
-        return env.getProperty("mobio.url.importCustomers");
+        return getDomainMobio()+ env.getProperty(EnvironmentConstant.MOBIO_IMPORT_CUSTOMERS);
     }
 
     public String getSourceDoneService() {
-        return env.getProperty("mobio.url.doneService");
+        return getDomainMobio()+ env.getProperty(EnvironmentConstant.MOBIO_DONE_SERVICE);
     }
 
     public String getSourceTransaction() {
-        return env.getProperty("mobio.url.transaction");
+        return getDomainMobio() + env.getProperty(EnvironmentConstant.MOBIO_TRANSACTION);
     }
-
+    //===============================================================//
     public String getMobioToken() {
-        return env.getProperty("mobio.token");
+        return env.getProperty(EnvironmentConstant.MOBIO_TOKEN);
     }
 
     public String getXMerchantId() {
-        return env.getProperty("mobio.xmerchantId");
+        return  env.getProperty(EnvironmentConstant.MOBIO_XMERCHANT_ID);
+    }
+
+    public String getSourceGateway(String typeData){
+        return env.getProperty(EnvironmentConstant.GATEWAY_URL) + typeData;
     }
 }
