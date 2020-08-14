@@ -1,4 +1,4 @@
-package com.venesa.common.DTO;
+package com.venesa.common.DTO.mobio;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.venesa.common.DTO;
+package com.venesa.common.DTO.mobio;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
@@ -11,8 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class ContractUpdateRes {
-    private int useStatus;
+    private int status;
     private String contractCode;
-    private String createdTime;
-    private String updatedTime;
 }
