@@ -1,6 +1,5 @@
-package com.venesa.common.DTO.mobio;
+package com.venesa.common.DTO.mobio.response;
 
-import com.venesa.common.DTO.mobio.ContractCreateRes;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

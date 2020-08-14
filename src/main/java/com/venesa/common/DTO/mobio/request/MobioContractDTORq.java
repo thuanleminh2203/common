@@ -1,4 +1,4 @@
-package com.venesa.common.DTO.mobio;
+package com.venesa.common.DTO.mobio.request;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
@@ -6,11 +6,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+import java.io.Serializable;
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class ContractUpdateRes {
-    private int status;
-    private String contractCode;
+public class MobioContractDTORq implements Serializable {
+    private List<BookingDTO> contract;
 }

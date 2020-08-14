@@ -1,4 +1,4 @@
-package com.venesa.common.DTO.mobio;
+package com.venesa.common.DTO.mobio.request;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
@@ -6,10 +6,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
+import java.io.Serializable;
+
 @AllArgsConstructor
+@NoArgsConstructor
+@Data
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class ContractCreateRes {
-    private String contractCode;
+public class Supplier implements Serializable {
+    private String code;
+    private String name;
 }
