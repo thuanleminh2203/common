@@ -13,4 +13,6 @@ public class EnvironmentConstant {
     public static final String MOBIO_URL = "mobio.url";
     public static final String MOBILE_URL = "mobile.url";
     public static final String MOBILE_UPDATE_BOOKING = "mobile.update.url.booking";
+    public static final String MOBILE_CREATE_SURVEY = "mobile.create.url.survey";
+    public static final String CS2_SEND_MESSAGE = "message.url";
 }

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpMethod;
+import org.springframework.stereotype.Component;
 
 @Configuration
 @PropertySource("classpath:environment.properties")
@@ -17,17 +18,10 @@ public class EnvironmentConfig {
         return env.getProperty(EnvironmentConstant.MOBIO_URL);
     }
 
-    public String getDomainMobileSerivce() {
-        return env.getProperty(EnvironmentConstant.MOBILE_URL);
-    }
-
     public String getSourceBooking() {
         return getDomainMobio() + env.getProperty(EnvironmentConstant.MOBIO_BOOKING);
     }
 
-    public String getSourceUpdateBooking() {
-        return getDomainMobileSerivce() + env.getProperty(EnvironmentConstant.MOBILE_UPDATE_BOOKING);
-    }
 
     public String getSourceContract() {
         return getDomainMobio() + env.getProperty(EnvironmentConstant.MOBIO_CONTRACT);
@@ -47,6 +41,25 @@ public class EnvironmentConfig {
 
     public String getSourceTransaction() {
         return getDomainMobio() + env.getProperty(EnvironmentConstant.MOBIO_TRANSACTION);
+    }
+
+    // CRM API URL
+
+    public String getDomainMobileSerivce() {
+        return env.getProperty(EnvironmentConstant.MOBILE_URL);
+    }
+
+    public String getSourceCRMUpdateBooking() {
+        return getDomainMobileSerivce() + env.getProperty(EnvironmentConstant.MOBILE_UPDATE_BOOKING);
+    }
+
+    public String getSourceCRMCreateSurvey() {
+        return getDomainMobileSerivce() + env.getProperty(EnvironmentConstant.MOBILE_CREATE_SURVEY);
+    }
+
+    // CS2 SEND MESSAGE URL
+    public String getSourceSendMessageCS2() {
+        return env.getProperty(EnvironmentConstant.CS2_SEND_MESSAGE);
     }
 
     //===============================================================//
