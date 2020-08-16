@@ -16,6 +16,7 @@ import java.io.Serializable;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class BookingDTO extends BookingBase implements Serializable {
     private String productCode;
+    private String profileId;
     private String contractCode;
     private String branchCode;
     private int sessionNumber;
