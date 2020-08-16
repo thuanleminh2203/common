@@ -25,16 +25,15 @@ public class WebClientUtils {
      * @param method
      * @param url
      * @param tClass
-     * @param token
      * @return
      * @throws Exception
      */
-    public <T, V> T callInternalService(ParameterizedTypeReference<T> type, V body, HttpMethod method, String url,
-                                        Class<T> tClass, String token) throws Exception {
+    public <T, V> T callInternalService(ParameterizedTypeReference<?> type, V body, HttpMethod method, String url,
+                                        Class<T> tClass) throws Exception {
         T dto = null;
         ResponseData responseData = webClient.method(method).uri(url)
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                .header(HttpHeaders.AUTHORIZATION, token).accept(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
                 .body(Mono.justOrEmpty(body), type)
                 .retrieve()
                 .onStatus(HttpStatus::is4xxClientError, clientResponse ->

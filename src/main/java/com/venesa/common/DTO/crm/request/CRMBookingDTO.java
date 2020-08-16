@@ -1,7 +1,6 @@
-package com.venesa.common.DTO.mobio.request;
+package com.venesa.common.DTO.crm.request;
 
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,8 +12,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class BookingDTO extends BookingBase implements Serializable {
+public class CRMBookingDTO extends CRMBookingBase implements Serializable {
     private String productCode;
     private String profileId;
     private String contractCode;
