@@ -12,14 +12,15 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Data
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class TherapyInfo implements Serializable {
-    private String contractCode;
-    private String productCode;
-    private String branchCode;
-    private String bookingCode;
-    private String startTime;
-    private String endTime;
-    private Integer sessionNumber;
-    private Integer sessionTotal;
-    private Integer profileId;
+public class MobioCustomerUpdateRq implements Serializable {
+    private String phoneNumber;
+    private String email;
+    private String fullName;
+    private String profileId;
+    private String address;
+    private String birthday;
+    private Integer gender;
+    private String identifyType;
+    private String identifyCode;
+    private String provinceCode;
 }

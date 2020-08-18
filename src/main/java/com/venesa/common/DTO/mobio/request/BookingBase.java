@@ -17,8 +17,10 @@ import java.io.Serializable;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BookingBase implements Serializable {
-    private int bookingCode;
+    private String bookingCode;
+    private String profileId;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "GMT+07:00")
     private String appointmentTime;
     private int workShiftId;
+    private String description;
 }
