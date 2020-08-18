@@ -20,7 +20,8 @@ public class MobioCustomer implements Serializable {
     private String address;
     private String cardId;
     private String code;
-    private Integer point;
     private String birthday;
     private Integer gender;
+    private String identifyType;
+    private String identifyCode;
 }

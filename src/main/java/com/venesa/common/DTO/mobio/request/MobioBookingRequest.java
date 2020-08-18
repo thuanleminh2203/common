@@ -13,6 +13,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class MobioBookingRequest<T> implements Serializable {
-    private List<T> services;
+public class MobioBookingRequest implements Serializable {
+    private List<BookingBase> services;
 }
