@@ -11,5 +11,5 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class CRMSendMessageDTO implements Serializable {
     private String message;
-    private String phoneNumber;
+    private String phone;
 }

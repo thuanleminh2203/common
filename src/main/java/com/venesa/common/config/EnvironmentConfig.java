@@ -57,6 +57,18 @@ public class EnvironmentConfig {
         return getDomainMobileSerivce() + env.getProperty(EnvironmentConstant.MOBILE_CREATE_SURVEY);
     }
 
+    public String getSourceCRMGetWorkShiftId() {
+        return getDomainMobileSerivce() + env.getProperty(EnvironmentConstant.MOBILE_GET_WORKSHIFTID);
+    }
+
+    public String getSourceCRMCreateUser() {
+        return getDomainMobileSerivce() + env.getProperty(EnvironmentConstant.MOBILE_CREATE_USER);
+    }
+
+    public String getSourceCRMUpdateUser() {
+        return getDomainMobileSerivce() + env.getProperty(EnvironmentConstant.MOBILE_UPDATE_USER);
+    }
+
     // CS2 SEND MESSAGE URL
     public String getSourceSendMessageCS2() {
         return env.getProperty(EnvironmentConstant.CS2_SEND_MESSAGE);

@@ -9,6 +9,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CRMBookingUpdateRes implements Serializable {
-    private int bookingCode;
+public class CRMUserUpdateRes implements Serializable {
+    private String profileId;
+    private String profilingProfileId;
 }

@@ -15,7 +15,7 @@ public class CRMMessageDTO implements Serializable {
     private int sendUnit;
     private String title;
     private String message;
-    private String phoneNumber;
+    private String phone;
     private int type;
     private Date sendDate;
     private Date receiveDate;
