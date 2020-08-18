@@ -48,7 +48,7 @@ public class WebClientUtils {
                 .bodyToMono(ResponseData.class).block();
         ObjectMapper objectMapper = new ObjectMapper();
 
-        dto = objectMapper.convertValue(responseData, tClass);
+        dto = objectMapper.convertValue(responseData.getData(), tClass);
         return dto;
     }
 }

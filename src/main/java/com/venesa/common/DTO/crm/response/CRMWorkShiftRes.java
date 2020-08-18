@@ -5,10 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CRMBookingUpdateRes implements Serializable {
-    private int bookingCode;
+public class CRMWorkShiftRes implements Serializable {
+    List<Integer> listWorkShift;
 }
