@@ -13,7 +13,10 @@ import java.io.Serializable;
 @Data
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class TherapyInfo implements Serializable {
-    private String serviceCode;
+    private String contractCode;
+    private String productCode;
+    private String branchCode;
+    private String bookingCode;
     private String startTime;
     private String endTime;
     private Integer sessionNumber;

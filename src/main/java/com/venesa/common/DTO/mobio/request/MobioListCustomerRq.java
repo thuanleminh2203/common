@@ -14,5 +14,5 @@ import java.util.List;
 @Data
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class MobioListCustomerRq implements Serializable {
-    private List<MobioListCustomerRq> dataProfile;
+    private List<MobioCustomer> dataProfile;
 }

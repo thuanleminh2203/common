@@ -49,6 +49,7 @@ public class ConstantsUtil {
     public static final String CONTRACT = "contract";
     public static final String BOOKING = "booking";
     public static final String CUSTOMER = "customer";
+    public static final String THERAPY = "therapy";
 
 
 }

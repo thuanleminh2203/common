@@ -12,9 +12,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class CRMSendMessageRes implements Serializable {
     @JsonProperty("MessageId")
-    private int messageId;
+    private String messageId;
     @JsonProperty("PartnerId")
-    private int partnerId;
+    private String partnerId;
     @JsonProperty("BrandName")
     private String brandName;
     @JsonProperty("Telco")
